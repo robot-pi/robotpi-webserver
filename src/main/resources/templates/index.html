@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Call</title>
+    <script defer src="js/videocall.js"></script>
+</head>
+<body>
+<h1>Video Call</h1>
+<div>
+    <p>Your Client ID: <span id="clientId"></span></p>
+    <label for="targetId">Enter Target Client ID:</label>
+    <input type="text" id="targetId" placeholder="Enter the target client ID">
+    <button onclick="callClient()">Call Client</button>
+    <button id="answerButton" onclick="answerCall()" style="display: none;">Answer</button>
+    <button id="rejectButton" onclick="rejectCall()" style="display: none;">Reject</button>
+    <button id="endCallButton" onclick="endCall()" style="display: none;">End Call</button>
+</div>
+<div>
+    <video id="localVideo" autoplay playsinline muted></video>
+    <video id="remoteVideo" autoplay playsinline></video>
+</div>
+<div id="errorMessage" style="color: red;"></div>
+</body>
+</html>

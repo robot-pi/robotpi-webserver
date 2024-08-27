@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Host Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #clients {
+            margin-top: 20px;
+        }
+        .client {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .status {
+            font-weight: bold;
+        }
+        .online {
+            color: green;
+        }
+        .offline {
+            color: red;
+        }
+        #localVideo, #remoteVideo {
+            width: 45%;
+            margin: 10px;
+        }
+    </style>
+    <script defer src="js/videocall.js"></script>
+</head>
+<body>
+<h1>Host Dashboard</h1>
+<p>Your ID: <span id="clientId"></span></p>
+<div id="clients"></div>
+
+<button id="answerButton" onclick="answerCall()" style="display: none;">Answer</button>
+<button id="rejectButton" onclick="rejectCall()" style="display: none;">Reject</button>
+<button id="endCallButton" onclick="endCall()" style="display: none;">End Call</button>
+
+<div id="videos">
+    <video id="localVideo" autoplay muted></video>
+    <video id="remoteVideo" autoplay></video>
+</div>
+
+<p id="errorMessage" style="color: red;"></p>
+
+</body>
+</html>
